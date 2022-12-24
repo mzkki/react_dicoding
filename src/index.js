@@ -75,6 +75,9 @@ function News() {
   return (
     <div>
       <Header title="Latest News" subtitle="Covering March & April 2022" />
+      {someNews.map((news) => (
+        <Card {...news} key={news.title}/>
+      ))}
       {/* <Card
         title={someNews[0].title}
         date={someNews[0].date}
@@ -99,9 +102,9 @@ function News() {
         category={someNews[2].category}
         link={someNews[2].link}
       /> */}
-      <Card {...someNews[0]}/>
+      {/* <Card {...someNews[0]}/>
       <Card {...someNews[1]}/>
-      <Card {...someNews[2]}/>
+      <Card {...someNews[2]}/> */}
     </div>
   );
 }
